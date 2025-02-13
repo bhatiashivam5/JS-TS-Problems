@@ -9,13 +9,22 @@ function checkPalindromeString(str) {
         console.log("String is not an Palindrome");
     }
 }
-// check string is plaindrome using the js methods
+// check number is plaindrome using the js methods
+function checkPalindromeNumber(number) {
+    var reverse = parseInt(number.toString().split("").reverse().join(""));
+    if (number === reverse) {
+        console.log("Number is Palindrome");
+    }
+    else {
+        console.log("Number is not an Palindrome");
+    }
+}
+// check string is plaindrome without using the js methods
 function checkPalindromeStringWithoutJsFunc(str) {
     var reverse = "";
     for (var i = str.length - 1; i >= 0; i--) {
         reverse += str[i];
     }
-    console.log(str, reverse);
     if (str === reverse) {
         console.log("String is Palindrome");
     }
@@ -23,5 +32,21 @@ function checkPalindromeStringWithoutJsFunc(str) {
         console.log("String is not an Palindrome");
     }
 }
-checkPalindromeString("lol");
-checkPalindromeStringWithoutJsFunc("lol");
+// check number is plaindrome without using the js methods
+function checkPalindromeNumberWithoutJsFunc(num) {
+    var str = num === null || num === void 0 ? void 0 : num.toString();
+    var reverse = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        reverse += str[i];
+    }
+    if (parseInt(str) === parseInt(reverse)) {
+        console.log("Number is Palindrome");
+    }
+    else {
+        console.log("Number is not an Palindrome");
+    }
+}
+checkPalindromeString("hello");
+checkPalindromeNumber(1221);
+checkPalindromeStringWithoutJsFunc("ABCDCBA");
+checkPalindromeNumberWithoutJsFunc(1234567);
