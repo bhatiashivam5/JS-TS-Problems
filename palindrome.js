@@ -9,4 +9,19 @@ function checkPalindromeString(str) {
         console.log("String is not an Palindrome");
     }
 }
+// check string is plaindrome using the js methods
+function checkPalindromeStringWithoutJsFunc(str) {
+    var reverse = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        reverse += str[i];
+    }
+    console.log(str, reverse);
+    if (str === reverse) {
+        console.log("String is Palindrome");
+    }
+    else {
+        console.log("String is not an Palindrome");
+    }
+}
 checkPalindromeString("lol");
+checkPalindromeStringWithoutJsFunc("lol");
